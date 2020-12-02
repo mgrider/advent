@@ -8,17 +8,19 @@ let input: [Int] = contents.split(separator: "\n").map { Int($0) ?? 0 }
 let start = Date()
 loops: for i in input {
 	for i2 in input {
-		if let i3 = input.first(where: {
-			i + i2 + $0 == 2020
-		}) {
-			print(i * i2 * i3)
-			break loops
+		for i3 in input {
+			if i + i2 + i3 == 2020 {
+				print(i * i2 * i3)
+				break loops
+			}
 		}
 	}
 }
 let diff = String(format:"%.2f", -start.timeIntervalSinceNow)
 print("Took \(diff) seconds")
 //281473080
+// 3 for loops: 0.55 seconds
+// old way using .first
 //Took 29.36 seconds
 
 // 01.1
