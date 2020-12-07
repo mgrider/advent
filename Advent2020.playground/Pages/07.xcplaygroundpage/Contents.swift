@@ -17,10 +17,7 @@ dotted black bags contain no other bags.
 """.split(separator: "\n").map { String($0) }
 
 let bagPattern = #"^([\w| ]*) bags contain (.*).$"#
-let bagRegEx = try NSRegularExpression(pattern: bagPattern, options: [])
-
 let subbagPattern = #"\s?(\d{1,}) ([\w| ]*) bag"#
-let subbagRegEx = try NSRegularExpression(pattern: subbagPattern, options: [])
 
 var bags = [String: [String: Int]]()
 
