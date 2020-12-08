@@ -14,6 +14,7 @@ acc -99
 acc +1
 jmp -4
 acc +6
+end +0
 """.split(separator: "\n").map { String($0) }
 
 let regex =  #"^(\w{3}) ([+|-])(\d{1,})$"#
@@ -29,28 +30,41 @@ for str in input {
 	}
 }
 
-print("program: \(program)")
+//print("program: \(program)")
 
-var accumulator = 0
-var hasRun = [0: false]
-var index = 0
+print("i goes to \(program.count)")
 
-while true {
-	if let has = hasRun[index], has == true {
-		print("value before infinite loop = \(accumulator)")
-		break
+for i in 0..<program.count {
+	var accumulator = 0
+	var hasRun = [0: false]
+	var index = 0
+	var changed = false
+	if program[i].0 == "jmp" {
+		program[i].0 = "nop"
+		changed = true
 	}
-	hasRun[index] = true
-	switch program[index].0 {
-	case "nop":
-		index += 1
-	case "jmp":
-		print("jmp \(program[index].1), new index is \(index)")
-		index += program[index].1
-	case "acc":
-		accumulator += program[index].1
-		index += 1
-	default:
-		print("should not get here.")
+	while true {
+		if let has = hasRun[index], has == true {
+//			print("\(i) : value before infinite loop = \(accumulator)")
+			break
+		}
+		hasRun[index] = true
+		switch program[index].0 {
+		case "nop":
+			index += 1
+		case "jmp":
+//			print("jmp \(program[index].1), new index is \(index)")
+			index += program[index].1
+		case "acc":
+			accumulator += program[index].1
+			index += 1
+		case "end":
+			print("it worked! val = \(accumulator)")
+		default:
+			print("should not get here.")
+		}
+	}
+	if changed {
+		program[i].0 = "jmp"
 	}
 }
