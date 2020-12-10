@@ -6,53 +6,57 @@ let input: [Int] = contents.split(separator: "\n").map { Int($0) ?? 0 }
 
 let sorted = input.sorted()
 
-let testSorted = """
-16
-10
-15
-5
-1
-11
-7
+let testInput = """
+28
+33
+18
+42
+31
+14
+46
+20
+48
+47
+24
+23
+49
+45
 19
-6
-12
+38
+39
+11
+1
+32
+25
+35
+8
+17
+7
+9
 4
-""".split(separator: "\n").map { Int($0) ?? 0 }.sorted()
+2
+34
+10
+3
+""".split(separator: "\n").map { Int($0) ?? 0 }
+let testSorted = testInput.sorted()
 
-//var sets = Set<[Int]>()
-//sets.insert(sorted)
-//var current = [Int]()
+// === part 2 ===
 
-var numberOfSets = [1]
-var index = 0
-
-for i in sorted {
-	var number = 1
-	// +1
-	if sorted.count > index + 1 && sorted[index + 1] < i + 3 {
-		number += 1
+var countsForValues = [0: 1]
+for adapter in sorted {
+	var count = 0
+	for i in 1...3 {
+		if countsForValues[adapter - i] != nil {
+			count += countsForValues[adapter - i]!
+		}
 	}
-	// +2
-	if sorted.count > index + 2 && sorted[index + 2] < i + 3 {
-		number += 1
-	}
-	// +3
-	if sorted.count > index + 3 && sorted[index + 3] < i + 3 {
-		number += 1
-	}
-	numberOfSets.append(number)
-	index += 1
+	countsForValues[adapter] = count
 }
-print(numberOfSets)
-var total = 1
-for i in numberOfSets {
-	total = total * i
-}
+//print("counts for values: \(countsForValues)")
+let total = countsForValues[sorted.last!]!
 
 print("total = \(total)")
-
-
 
 // === part 1 ===
 
