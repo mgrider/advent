@@ -58,6 +58,29 @@ let total = countsForValues[sorted.last!]!
 
 print("total = \(total)")
 
+var ones = 0.0
+var twos = 0.0
+var threes = 0.0
+var current = 0
+var diff = 0
+
+for i in sorted {
+	diff = i - current
+	if diff == 1 {
+		ones += 1
+	}
+	else if diff == 2 {
+		twos += 1
+	}
+	else if diff == 3 {
+		threes += 1
+	}
+	current = i
+}
+let twoPow = pow(2.0, twos)
+let threePow = pow(3.0, threes)
+print("twos: \(twos), 2^x: \(twoPow), threes: \(threes + 1), 3^y: \(threePow) += \(twoPow + threePow)")
+
 // === part 1 ===
 
 //var ones = 0
