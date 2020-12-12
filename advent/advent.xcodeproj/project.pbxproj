@@ -11,6 +11,7 @@
 		F006B3502583483600BD9E37 /* String+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F006B34F2583483600BD9E37 /* String+Utils.swift */; };
 		F006B35325834EE500BD9E37 /* Day11.swift in Sources */ = {isa = PBXBuildFile; fileRef = F006B35225834EE500BD9E37 /* Day11.swift */; };
 		F006B357258354E900BD9E37 /* files.swift in Sources */ = {isa = PBXBuildFile; fileRef = F006B356258354E900BD9E37 /* files.swift */; };
+		F006B35A2584841100BD9E37 /* Day12.swift in Sources */ = {isa = PBXBuildFile; fileRef = F006B3592584841100BD9E37 /* Day12.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -32,6 +33,8 @@
 		F006B34F2583483600BD9E37 /* String+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Utils.swift"; sourceTree = "<group>"; };
 		F006B35225834EE500BD9E37 /* Day11.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day11.swift; sourceTree = "<group>"; };
 		F006B356258354E900BD9E37 /* files.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = files.swift; sourceTree = "<group>"; };
+		F006B3592584841100BD9E37 /* Day12.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day12.swift; sourceTree = "<group>"; };
+		F006B35C258486A400BD9E37 /* Day12_input.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Day12_input.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +70,8 @@
 				F006B3432583459B00BD9E37 /* main.swift */,
 				F006B35225834EE500BD9E37 /* Day11.swift */,
 				F006B34D2583478E00BD9E37 /* Day11_input.txt */,
+				F006B3592584841100BD9E37 /* Day12.swift */,
+				F006B35C258486A400BD9E37 /* Day12_input.txt */,
 				F006B34F2583483600BD9E37 /* String+Utils.swift */,
 				F006B356258354E900BD9E37 /* files.swift */,
 			);
@@ -132,6 +137,7 @@
 			files = (
 				F006B3502583483600BD9E37 /* String+Utils.swift in Sources */,
 				F006B357258354E900BD9E37 /* files.swift in Sources */,
+				F006B35A2584841100BD9E37 /* Day12.swift in Sources */,
 				F006B3442583459B00BD9E37 /* main.swift in Sources */,
 				F006B35325834EE500BD9E37 /* Day11.swift in Sources */,
 			);
