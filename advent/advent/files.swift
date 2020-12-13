@@ -6,3 +6,8 @@ func stringArray(fromFile: String) -> [String] {
 	let input: [String] = contents.split(separator: "\n").map { String($0) }
 	return input
 }
+
+func stringArray(fromMultilineString str: String) -> [String] {
+	let input: [String] = str.split(separator: "\n").map { String($0) }
+	return input
+}
