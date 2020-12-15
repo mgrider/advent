@@ -1,13 +1,37 @@
-/// thanks to @scelis https://github.com/scelis/Advent-of-Code/blob/main/Sources/AdventKit/String%2BRegex.swift
-
 import Foundation
 
 extension String {
+
+	// MARK: Subtrings
 
 	subscript(offset: Int) -> Character {
 		self[index(startIndex, offsetBy: offset)]
 	}
 
+	public mutating func replaceCharacterAt(index: Int, with str: String) {
+		self.remove(at: self.index(self.startIndex, offsetBy: index))
+		self.insert(contentsOf: str, at: self.index(self.startIndex, offsetBy: index))
+	}
+
+	public mutating func replaceCharacterAt(index: Int, with char: Character) {
+		self.remove(at: self.index(self.startIndex, offsetBy: index))
+		self.insert(char, at: self.index(self.startIndex, offsetBy: index))
+	}
+
+	public func substring(with range: NSRange) -> String {
+		return (self as NSString).substring(with: range)
+	}
+
+	func padLeft(totalWidth: Int, withString: String) -> String {
+		let toPad = totalWidth - self.count
+		if toPad < 1 {
+			return self
+		}
+		return "".padding(toLength: toPad, withPad: withString, startingAt: 0) + self
+	}
+
+	// MARK: Regex
+	/// thanks to @scelis for these regex functions https://github.com/scelis/Advent-of-Code/blob/main/Sources/AdventKit/String%2BRegex.swift
 	public func enumerateMatches(
 		withPattern pattern: String,
 		patternOptions: NSRegularExpression.Options = [],
@@ -82,7 +106,4 @@ extension String {
 		return ret ?? []
 	}
 
-	public func substring(with range: NSRange) -> String {
-		return (self as NSString).substring(with: range)
-	}
 }
