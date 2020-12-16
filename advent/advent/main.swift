@@ -9,4 +9,6 @@ import Foundation
 //Day14Part1(useTestInput: false)
 //Day14Part2(useTestInput: false)
 //Day15Part1(useTestInput: false)
-Day15Part2(useTestInput: false)
+//Day15Part2(useTestInput: false)
+//Day16Part1(useTestInput: false)
+Day16Part2(useTestInput: false)
