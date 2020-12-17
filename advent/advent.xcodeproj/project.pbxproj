@@ -16,6 +16,8 @@
 		F006B365258728A900BD9E37 /* Day14.swift in Sources */ = {isa = PBXBuildFile; fileRef = F006B364258728A900BD9E37 /* Day14.swift */; };
 		F006B36A25887CC800BD9E37 /* Day15.swift in Sources */ = {isa = PBXBuildFile; fileRef = F006B36925887CC800BD9E37 /* Day15.swift */; };
 		F0DDB4ED2589CB9000ADEA0D /* Day16.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0DDB4EC2589CB9000ADEA0D /* Day16.swift */; };
+		F0DDB4F2258B1CD500ADEA0D /* Day17.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0DDB4F1258B1CD500ADEA0D /* Day17.swift */; };
+		F0DDB4F7258B322900ADEA0D /* Day17Part2.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0DDB4F6258B322900ADEA0D /* Day17Part2.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -46,6 +48,9 @@
 		F006B36925887CC800BD9E37 /* Day15.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day15.swift; sourceTree = "<group>"; };
 		F0DDB4EC2589CB9000ADEA0D /* Day16.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day16.swift; sourceTree = "<group>"; };
 		F0DDB4EF2589CBD000ADEA0D /* Day16_input.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Day16_input.txt; sourceTree = "<group>"; };
+		F0DDB4F1258B1CD500ADEA0D /* Day17.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day17.swift; sourceTree = "<group>"; };
+		F0DDB4F4258B1D5800ADEA0D /* Day17_input.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Day17_input.txt; sourceTree = "<group>"; };
+		F0DDB4F6258B322900ADEA0D /* Day17Part2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Day17Part2.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +84,9 @@
 			isa = PBXGroup;
 			children = (
 				F006B3432583459B00BD9E37 /* main.swift */,
+				F0DDB4F6258B322900ADEA0D /* Day17Part2.swift */,
+				F0DDB4F1258B1CD500ADEA0D /* Day17.swift */,
+				F0DDB4F4258B1D5800ADEA0D /* Day17_input.txt */,
 				F0DDB4EC2589CB9000ADEA0D /* Day16.swift */,
 				F0DDB4EF2589CBD000ADEA0D /* Day16_input.txt */,
 				F006B36925887CC800BD9E37 /* Day15.swift */,
@@ -159,6 +167,8 @@
 				F006B36A25887CC800BD9E37 /* Day15.swift in Sources */,
 				F006B357258354E900BD9E37 /* files.swift in Sources */,
 				F006B35F2585D61F00BD9E37 /* Day13.swift in Sources */,
+				F0DDB4F2258B1CD500ADEA0D /* Day17.swift in Sources */,
+				F0DDB4F7258B322900ADEA0D /* Day17Part2.swift in Sources */,
 				F006B35A2584841100BD9E37 /* Day12.swift in Sources */,
 				F006B3442583459B00BD9E37 /* main.swift in Sources */,
 				F006B35325834EE500BD9E37 /* Day11.swift in Sources */,
