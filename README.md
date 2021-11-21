@@ -14,7 +14,7 @@ Haven't started this one yet, but decided to get organized and create a project 
 
 ## 2020
 
-I started out trying to use swift playgrounds, but that only lasted a week or so. Mostly because playgrounds were getting kinda crashy. So that year is annoyingly split between playground files, and then one CLI project when I got sick enough of playgrounds to switch.
+I started out trying to use swift playgrounds, but that only lasted 11 days. (And it's weirdly split between a single playground with multple pages for days 1, 2, 7, 8, 9, 10 & 11, and individual playgrounds for days 3-6.) Playgrounds was getting kinda crashy. So after day 11 I switched to a Swift CLI project.
 
 
 ## 2018
