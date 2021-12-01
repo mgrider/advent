@@ -1,4 +1,4 @@
 import Foundation
 
-print("Hello, World!")
-
+let day = Day01()
+day.perform()
