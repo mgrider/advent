@@ -1,4 +1,4 @@
 import Foundation
 
-let day = Day02()
+let day = Day03()
 day.perform()
