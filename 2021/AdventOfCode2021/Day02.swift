@@ -79,7 +79,7 @@ class Day02 {
         }
         let output = depth * position
         print("depth: \(depth) * pos: \(position) = \(output)")
-
+//      depth: 1021972 * pos: 1906 = 1947878632
     }
 
     private func inputArray() -> [String] {
