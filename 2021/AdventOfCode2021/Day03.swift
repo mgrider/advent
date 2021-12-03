@@ -2,6 +2,7 @@ import Foundation
 
 class Day03 {
     func perform() {
+        part1()
         part2()
     }
 
