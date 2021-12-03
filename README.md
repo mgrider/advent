@@ -9,7 +9,7 @@ I do this for fun, and when it stops feeling fun (sometimes it just feels like w
 
 ## 2021
 
-Haven't started this one yet, but decided to get organized and create a project file ahead of time.
+Decided to get organized and create a project file ahead of time.
 
 
 ## 2020
