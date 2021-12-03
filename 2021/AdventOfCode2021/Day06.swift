@@ -3,6 +3,7 @@ import Foundation
 class Day06 {
     func perform() {
         part1()
+        part2()
     }
 
     func part1() {
