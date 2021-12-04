@@ -2,6 +2,8 @@ import Foundation
 
 extension Int {
 
+    /// Convert a string containing 0s and 1s to a decimal (`Int`) representation.
+    /// Shamelessly modified from https://kalkicode.com/binary-to-decimal-conversion-in-swift
     static func decimalFromBinaryString(_ num: String) -> Int
     {
         let number = Array(num);
