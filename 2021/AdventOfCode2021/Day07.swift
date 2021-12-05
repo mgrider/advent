@@ -1,10 +1,6 @@
 import Foundation
 
 class Day07 {
-    func perform() {
-        part1()
-        part2()
-    }
 
     func part1() {
         let input = inputArray()
@@ -22,5 +18,10 @@ class Day07 {
 
     private func inputArray() -> [String] {
         return stringArray(fromFile: "Day07.txt")
+    }
+
+    func perform() {
+        part1()
+        part2()
     }
 }
