@@ -40,7 +40,6 @@
 		8552153D275889E700FAFD75 /* Day02.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Day02.txt; sourceTree = "<group>"; };
 		8552153E27588EAE00FAFD75 /* Day03.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day03.swift; sourceTree = "<group>"; };
 		8552154027588ED000FAFD75 /* Day03.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Day03.txt; sourceTree = "<group>"; };
-		85521541275891D500FAFD75 /* Day06.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Day06.txt; sourceTree = "<group>"; };
 		85521542275891D500FAFD75 /* Day05.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Day05.txt; sourceTree = "<group>"; };
 		85521543275891D500FAFD75 /* Day04.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Day04.swift; sourceTree = "<group>"; };
 		85521544275891D500FAFD75 /* Day07.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Day07.swift; sourceTree = "<group>"; };
@@ -51,7 +50,6 @@
 		85521549275891D500FAFD75 /* Day09.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Day09.swift; sourceTree = "<group>"; };
 		8552154A275891D500FAFD75 /* Day08.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Day08.swift; sourceTree = "<group>"; };
 		8552154B275891D500FAFD75 /* Day06.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Day06.swift; sourceTree = "<group>"; };
-		8552154C275891D500FAFD75 /* Day07.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Day07.txt; sourceTree = "<group>"; };
 		855215542759E03B00FAFD75 /* Int+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Utils.swift"; sourceTree = "<group>"; };
 		8555F5B4274AE5FA00ED73A1 /* AdventOfCode2021 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = AdventOfCode2021; sourceTree = BUILT_PRODUCTS_DIR; };
 		8555F5B7274AE5FA00ED73A1 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
@@ -110,9 +108,7 @@
 				85521546275891D500FAFD75 /* Day05.swift */,
 				85521542275891D500FAFD75 /* Day05.txt */,
 				8552154B275891D500FAFD75 /* Day06.swift */,
-				85521541275891D500FAFD75 /* Day06.txt */,
 				85521544275891D500FAFD75 /* Day07.swift */,
-				8552154C275891D500FAFD75 /* Day07.txt */,
 				8552154A275891D500FAFD75 /* Day08.swift */,
 				85521547275891D500FAFD75 /* Day08.txt */,
 				85521549275891D500FAFD75 /* Day09.swift */,
