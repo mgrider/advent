@@ -8,6 +8,15 @@ extension String {
 		self[index(startIndex, offsetBy: offset)]
 	}
 
+    public func containsAllCharactersIn(_ string: String) -> Bool {
+        for char in string {
+            if !self.contains(char) {
+                return false
+            }
+        }
+        return true
+    }
+
 	public mutating func replaceCharacterAt(index: Int, with str: String) {
 		self.remove(at: self.index(self.startIndex, offsetBy: index))
 		self.insert(contentsOf: str, at: self.index(self.startIndex, offsetBy: index))
@@ -17,6 +26,14 @@ extension String {
 		self.remove(at: self.index(self.startIndex, offsetBy: index))
 		self.insert(char, at: self.index(self.startIndex, offsetBy: index))
 	}
+
+    public func removingCharactersIn(string: String) -> String {
+        var newString = self
+        for char in string {
+            newString = newString.replacingOccurrences(of: String(char), with: "")
+        }
+        return newString
+    }
 
 	public func substring(with range: NSRange) -> String {
 		return (self as NSString).substring(with: range)

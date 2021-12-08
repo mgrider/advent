@@ -35,6 +35,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		85485D4C2760776500CFA079 /* Day08-sample.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Day08-sample.txt"; sourceTree = "<group>"; };
 		855215372757382300FAFD75 /* Day01.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day01.swift; sourceTree = "<group>"; };
 		8552153B2758893400FAFD75 /* Day02.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day02.swift; sourceTree = "<group>"; };
 		8552153D275889E700FAFD75 /* Day02.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Day02.txt; sourceTree = "<group>"; };
@@ -111,6 +112,7 @@
 				85521544275891D500FAFD75 /* Day07.swift */,
 				8552154A275891D500FAFD75 /* Day08.swift */,
 				85521547275891D500FAFD75 /* Day08.txt */,
+				85485D4C2760776500CFA079 /* Day08-sample.txt */,
 				85521549275891D500FAFD75 /* Day09.swift */,
 				85521548275891D500FAFD75 /* Day09.txt */,
 				855215532758922B00FAFD75 /* util */,
