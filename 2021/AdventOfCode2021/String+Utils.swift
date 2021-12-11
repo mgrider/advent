@@ -2,6 +2,18 @@ import Foundation
 
 extension String {
 
+    // MARK: conversion to other things
+
+    public func intArray() -> [Int] {
+        var ints = [Int]()
+        for i in 0..<self.count {
+            if let integer = Int(String(self[i])) {
+                ints.append(integer)
+            }
+        }
+        return ints
+    }
+
 	// MARK: Subtrings
 
 	subscript(offset: Int) -> Character {
