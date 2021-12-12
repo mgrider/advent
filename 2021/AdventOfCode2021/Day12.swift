@@ -49,11 +49,11 @@ class Day12 {
     }
 
 //    var allPaths2 = [[String]]()
-    struct Path: Equatable {
+    struct Path: Equatable, Hashable {
         var string = ""
         var smallCaveTwice = false
     }
-    var allPaths2 = [Path]()
+    var allPaths2 = Set<Path>()
 
     func part2() {
         let start = allNodes["start"]!
@@ -69,10 +69,10 @@ class Day12 {
     func addPathsPart2(fromNode node: Node, toPath path: Path) {
         guard node.name != "start" else { return }
         var path = path
-        if path.string.contains(node.name) {
-            if node.isBig {
-                path.string = "\(path.string)\(node.name),"
-            } else if !path.smallCaveTwice {
+        if node.isBig {
+            path.string = "\(path.string)\(node.name),"
+        } else if path.string.contains(node.name) {
+            if !path.smallCaveTwice {
                 path.string = "\(path.string)\(node.name),"
                 path.smallCaveTwice = true
             } else {
@@ -82,9 +82,7 @@ class Day12 {
             path.string = "\(path.string)\(node.name),"
         }
         if node.name == "end" {
-            if !allPaths2.contains(path) {
-                allPaths2.append(path)
-            }
+            allPaths2.insert(path)
             return
         }
         for nodeName in node.connections {
