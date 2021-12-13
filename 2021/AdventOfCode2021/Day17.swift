@@ -10,7 +10,7 @@ class Day17 {
     }
 
     func part2() {
-        let input = inputArray()
+//        let input = inputArray()
 
         let output = ""
         print("part2 = \(output)")
