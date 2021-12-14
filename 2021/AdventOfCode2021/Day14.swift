@@ -11,7 +11,8 @@ class Day14 {
         let input = inputArray()
 
         var polymer = starting()
-        for _ in 0..<10 {
+        var characterCounts = [Character: CharacterCounts]()
+        for i in 0..<10 {
 
             var newPolymer = polymer
             var lastChar: Character?
@@ -27,17 +28,20 @@ class Day14 {
                 lastChar = char
             }
             polymer = newPolymer
-//            print("finished \(i)")
-        }
-
-        var characterCounts = [Character: CharacterCounts]()
-        for (_, char) in polymer.enumerated() {
-            if characterCounts[char] != nil {
-                characterCounts[char]!.count = characterCounts[char]!.count + 1
-            } else {
-                characterCounts[char] = CharacterCounts(char: char, count: 1)
+            characterCounts = [Character: CharacterCounts]()
+            for (_, char) in polymer.enumerated() {
+                if characterCounts[char] != nil {
+                    characterCounts[char]!.count = characterCounts[char]!.count + 1
+                } else {
+                    characterCounts[char] = CharacterCounts(char: char, count: 1)
+                }
+            }
+            print("finished \(i)")
+            for count in characterCounts {
+                print("\(count.value.char) - count: \(count.value.count)")
             }
         }
+
         let sorted = characterCounts.values.sorted(by: { $0.count > $1.count })
 
         let output = sorted.first!.count - sorted.last!.count
@@ -46,7 +50,7 @@ class Day14 {
 
     struct Input {
         var key: String
-        var value: String
+        var insert: Character
         var increments: [String]
     }
 
@@ -60,12 +64,16 @@ class Day14 {
                 "\(key[0])\(value)",
                 "\(value)\(key[1])",
             ]
-            inputMap[key] = Input(key: key, value: value, increments: increments)
+            inputMap[key] = Input(key: key, insert: value[0], increments: increments)
         }
 
+        var characterCounts = [Character: Int]()
         var pairCounts = [String: Int]()
         for (key, _) in inputMap {
             pairCounts[key] = 0
+            for i in 0..<key.count {
+                characterCounts[key[i]] = 0
+            }
         }
 
         var lastChar: Character?
@@ -74,11 +82,12 @@ class Day14 {
                 let key = "\(lastChar)\(char)"
                 pairCounts[key]! += 1
             }
+            characterCounts[char]! += 1
             lastChar = char
         }
 
+        print(characterCounts)
         print(pairCounts)
-        var characterCounts = [Character: Int]()
 
         for i in 0..<40 {
             var newPairCounts = pairCounts
@@ -88,35 +97,13 @@ class Day14 {
                     for otherKey in inputMap[oldCount.key]!.increments {
                         newPairCounts[otherKey]! += oldCount.value
                     }
+                    characterCounts[inputMap[oldCount.key]!.insert]! += oldCount.value
                 }
             }
             pairCounts = newPairCounts
             print("finished \(i): \(pairCounts)")
-            characterCounts = [Character: Int]()
-            for (_, value) in inputMap {
-                for i in 0..<value.key.count {
-                    let char = value.key[i]
-                    if let num = characterCounts[char] {
-                        characterCounts[char] = num +  pairCounts[value.key]!
-                    } else {
-                        characterCounts[char] = pairCounts[value.key]!
-                    }
-                }
-            }
             print("\(characterCounts)")
         }
-
-//        var characterCounts = [Character: Int]()
-//        for (_, value) in inputMap {
-//            for i in 0..<value.key.count {
-//                let char = value.key[i]
-//                if let num = characterCounts[char] {
-//                    characterCounts[char] = num +  pairCounts[value.key]!
-//                } else {
-//                    characterCounts[char] = pairCounts[value.key]!
-//                }
-//            }
-//        }
 
         let output = characterCounts.values.max()! - characterCounts.values.min()!
         print("part2 = \(output)")
@@ -134,7 +121,7 @@ class Day14 {
     }
 
     private func starting() -> String {
-        return "NNCB"
+//        return "NNCB"
         return "NBOKHVHOSVKSSBSVVBCS"
     }
 
