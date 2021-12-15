@@ -7,7 +7,13 @@ struct Grid {
         var y: Int
     }
 
-    var arr = [[Int]]()
+    var data = [[Int]]()
+
+    mutating func initializeDataWith(width: Int, height: Int, defaultValue: Int = 0) {
+        for _ in 0..<height {
+            data.append(Array(repeating: defaultValue, count: width))
+        }
+    }
 
     struct PointPriorityQueue {
         private var elements = [(point: Point, priority: Int)]()
@@ -35,7 +41,7 @@ struct Grid {
 
     func inBounds(point: Point) -> Bool {
         return point.x >= 0 && point.y >= 0 &&
-            point.x < arr[0].count && point.y < arr.count
+            point.x < data[0].count && point.y < data.count
     }
 
     // neighboring spaces
@@ -64,7 +70,7 @@ struct Grid {
     public var costSoFar = [Point: Int]()
 
     func cost(point: Point) -> Int {
-        return arr[point.y][point.x]
+        return data[point.y][point.x]
     }
 
     func heuristic(a: Point, b: Point) -> Int {
@@ -80,6 +86,10 @@ struct Grid {
 
         while frontier.count() > 0 {
             let current = frontier.dequeue()
+
+            if current == end {
+                break
+            }
 
             for next in neighbors(point: current) {
                 let newCost = costSoFar[current]! + cost(point: next)
@@ -103,12 +113,12 @@ struct Grid {
 
     func printSearchPath(_ path: [Point]) {
         var string = "grid: \n"
-        for y in 0..<arr.count {
-            for x in 0..<arr[y].count {
+        for y in 0..<data.count {
+            for x in 0..<data[y].count {
                 if path.contains(Point(x: x, y: y)) {
                     string += "*, "
                 } else {
-                    string += "\(arr[y][x]), "
+                    string += "\(data[y][x]), "
                 }
             }
             string += "\n"

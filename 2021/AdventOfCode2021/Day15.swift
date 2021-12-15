@@ -6,7 +6,7 @@ class Day15 {
         var grid = inputArray()
 
         let start = Grid.Point(x: 0, y: 0)
-        let end = Grid.Point(x: grid.arr[0].count-1, y: grid.arr.count-1)
+        let end = Grid.Point(x: grid.data[0].count-1, y: grid.data.count-1)
         let path = grid.search(start: start, end: end)
 //        grid.printSearchPath(path)
 
@@ -19,9 +19,17 @@ class Day15 {
     }
 
     func part2() {
-//        let input = inputArray()
+        var grid = part2Input()
+        let start = Grid.Point(x: 0, y: 0)
+        let end = Grid.Point(x: grid.data[0].count-1, y: grid.data.count-1)
+        let path = grid.search(start: start, end: end)
+//        grid.printSearchPath(path)
 
-        let output = ""
+        var totalCost = 0
+        for point in path {
+            totalCost += grid.cost(point: point)
+        }
+        let output = totalCost
         print("part2 = \(output)")
     }
 
@@ -29,7 +37,7 @@ class Day15 {
         let input = stringArray(fromFile: "Day15.txt")
         var grid = Grid()
         for line in input {
-            grid.arr.append(line.intArray())
+            grid.data.append(line.intArray())
         }
         return grid
     }
@@ -37,10 +45,29 @@ class Day15 {
     private func part2Input() -> Grid {
         let input = stringArray(fromFile: "Day15.txt")
         var grid = Grid()
-        for multiplier in 0..<5 {
-            for line in input {
-                grid.arr.append(line.intArray())
+        let width = input[0].count * 5
+        let height = input.count * 5
+        grid.initializeDataWith(width: width, height: height)
+        var baseY = 0
+        var baseX = 0
+        for line in input {
+            baseX = 0
+            for cost in line.intArray() {
+                grid.data[baseY][baseX] = cost
+                for additionX in 0..<5 {
+                    let costX = cost + additionX
+                    let value = costX < 10 ? costX : ((costX % 10) + 1)
+                    grid.data[baseY][baseX + (line.count * additionX)] = value
+                    // each row below
+                    for additionY in 1..<5 {
+                        let costY = costX + additionY
+                        let downValue = costY < 10 ? costY : ((costY % 10) + 1)
+                        grid.data[baseY + (additionY * input.count)][baseX + (line.count * additionX)] = downValue
+                    }
+                }
+                baseX += 1
             }
+            baseY += 1
         }
         return grid
     }
