@@ -56,6 +56,10 @@ import Foundation
 //let day14 = Day14()
 //day14.perform()
 
-print("=== DAY 15 ===")
-let day15 = Day15()
-day15.perform()
+//print("=== DAY 15 ===")
+//let day15 = Day15()
+//day15.perform()
+
+print("=== DAY 16 ===")
+let day16 = Day16()
+day16.perform()

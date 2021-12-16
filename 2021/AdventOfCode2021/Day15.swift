@@ -73,7 +73,10 @@ class Day15 {
     }
 
     func perform() {
+        let date = Date()
         part1()
+        print("took: \(Date().timeIntervalSince(date).formatted())")
         part2()
+        print("took: \(Date().timeIntervalSince(date).formatted())")
     }
 }
