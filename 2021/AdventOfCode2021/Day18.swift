@@ -33,7 +33,8 @@ class Day18 {
         var allSnailInts = [SnailInt]()
         var magnitudes = [Int]()
         for i in 0..<input.count {
-            allSnailInts = parseInputLine(input: input[i])
+            let snail1 = parseInputLine(input: input[i])
+            allSnailInts = snail1
             var reducedSnailInts = reduceSnailInts(allSnailInts)
             while allSnailInts != reducedSnailInts {
                 allSnailInts = reducedSnailInts
@@ -45,7 +46,7 @@ class Day18 {
                 }
                 let snail2 = parseInputLine(input: input[i2])
                 allSnailInts = addSnailInts(left: allSnailInts, right: snail2)
-                var reducedSnailInts = reduceSnailInts(allSnailInts)
+                reducedSnailInts = reduceSnailInts(allSnailInts)
                 while allSnailInts != reducedSnailInts {
                     allSnailInts = reducedSnailInts
                     reducedSnailInts = reduceSnailInts(allSnailInts)
@@ -54,7 +55,7 @@ class Day18 {
             }
         }
 
-        let output = magnitudes.max()
+        let output = magnitudes.max()!
         print("part2 = \(output)")
     }
 
