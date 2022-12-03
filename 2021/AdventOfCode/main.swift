@@ -1,5 +1,7 @@
 import Foundation
 
+
+
 //print("=== DAY 01 ===")
 //let day1 = Day01()
 //day1.perform()
@@ -68,9 +70,12 @@ import Foundation
 //let day17 = Day17()
 //day17.perform()
 
-print("=== DAY 18 ===")
-let day18 = Day18()
-day18.perform()
+//print("=== DAY 18 ===")
+//let day18 = Day18()
+//day18.perform()
+
+// Note: this is where I left off for 2021
+// TODO?
 
 //print("=== DAY 19 ===")
 //let day19 = Day19()

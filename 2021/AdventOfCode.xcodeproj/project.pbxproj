@@ -56,6 +56,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		8501EBDE293BB0B100FA9A60 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		852AE3DC276A526A007DF76A /* Grid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Grid.swift; sourceTree = "<group>"; };
 		85485D4C2760776500CFA079 /* Day08-sample.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Day08-sample.txt"; sourceTree = "<group>"; };
 		855215372757382300FAFD75 /* Day01.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day01.swift; sourceTree = "<group>"; };
@@ -74,7 +75,7 @@
 		8552154A275891D500FAFD75 /* Day08.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Day08.swift; sourceTree = "<group>"; };
 		8552154B275891D500FAFD75 /* Day06.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Day06.swift; sourceTree = "<group>"; };
 		855215542759E03B00FAFD75 /* Int+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Utils.swift"; sourceTree = "<group>"; };
-		8555F5B4274AE5FA00ED73A1 /* AdventOfCode2021 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = AdventOfCode2021; sourceTree = BUILT_PRODUCTS_DIR; };
+		8555F5B4274AE5FA00ED73A1 /* AdventOfCode */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = AdventOfCode; sourceTree = BUILT_PRODUCTS_DIR; };
 		8555F5B7274AE5FA00ED73A1 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		8555F5BE274AE63600ED73A1 /* String+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Utils.swift"; sourceTree = "<group>"; };
 		8555F5C0274AE64000ED73A1 /* files.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = files.swift; sourceTree = "<group>"; };
@@ -131,37 +132,9 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		855215532758922B00FAFD75 /* util */ = {
+		8501EBDD293BB06100FA9A60 /* 2021 */ = {
 			isa = PBXGroup;
 			children = (
-				8555F5BE274AE63600ED73A1 /* String+Utils.swift */,
-				855215542759E03B00FAFD75 /* Int+Utils.swift */,
-				8555F5C0274AE64000ED73A1 /* files.swift */,
-				852AE3DC276A526A007DF76A /* Grid.swift */,
-			);
-			name = util;
-			sourceTree = "<group>";
-		};
-		8555F5AB274AE5FA00ED73A1 = {
-			isa = PBXGroup;
-			children = (
-				8555F5B6274AE5FA00ED73A1 /* AdventOfCode2021 */,
-				8555F5B5274AE5FA00ED73A1 /* Products */,
-			);
-			sourceTree = "<group>";
-		};
-		8555F5B5274AE5FA00ED73A1 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				8555F5B4274AE5FA00ED73A1 /* AdventOfCode2021 */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		8555F5B6274AE5FA00ED73A1 /* AdventOfCode2021 */ = {
-			isa = PBXGroup;
-			children = (
-				8555F5B7274AE5FA00ED73A1 /* main.swift */,
 				855215372757382300FAFD75 /* Day01.swift */,
 				8552153B2758893400FAFD75 /* Day02.swift */,
 				8552153D275889E700FAFD75 /* Day02.txt */,
@@ -218,17 +191,54 @@
 				85702F8F276EF83400EEA7EC /* Day28.txt */,
 				85702F95276EF83400EEA7EC /* Day29.swift */,
 				85702F90276EF83400EEA7EC /* Day29.txt */,
+			);
+			name = 2021;
+			sourceTree = "<group>";
+		};
+		855215532758922B00FAFD75 /* util */ = {
+			isa = PBXGroup;
+			children = (
+				8555F5BE274AE63600ED73A1 /* String+Utils.swift */,
+				855215542759E03B00FAFD75 /* Int+Utils.swift */,
+				8555F5C0274AE64000ED73A1 /* files.swift */,
+				852AE3DC276A526A007DF76A /* Grid.swift */,
+			);
+			name = util;
+			sourceTree = "<group>";
+		};
+		8555F5AB274AE5FA00ED73A1 = {
+			isa = PBXGroup;
+			children = (
+				8501EBDE293BB0B100FA9A60 /* README.md */,
+				8555F5B6274AE5FA00ED73A1 /* AdventOfCode */,
+				8555F5B5274AE5FA00ED73A1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8555F5B5274AE5FA00ED73A1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8555F5B4274AE5FA00ED73A1 /* AdventOfCode */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8555F5B6274AE5FA00ED73A1 /* AdventOfCode */ = {
+			isa = PBXGroup;
+			children = (
+				8555F5B7274AE5FA00ED73A1 /* main.swift */,
+				8501EBDD293BB06100FA9A60 /* 2021 */,
 				855215532758922B00FAFD75 /* util */,
 			);
-			path = AdventOfCode2021;
+			path = AdventOfCode;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		8555F5B3274AE5FA00ED73A1 /* AdventOfCode2021 */ = {
+		8555F5B3274AE5FA00ED73A1 /* AdventOfCode */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8555F5BB274AE5FA00ED73A1 /* Build configuration list for PBXNativeTarget "AdventOfCode2021" */;
+			buildConfigurationList = 8555F5BB274AE5FA00ED73A1 /* Build configuration list for PBXNativeTarget "AdventOfCode" */;
 			buildPhases = (
 				8555F5B0274AE5FA00ED73A1 /* Sources */,
 				8555F5B1274AE5FA00ED73A1 /* Frameworks */,
@@ -238,9 +248,9 @@
 			);
 			dependencies = (
 			);
-			name = AdventOfCode2021;
+			name = AdventOfCode;
 			productName = AdventOfCode2021;
-			productReference = 8555F5B4274AE5FA00ED73A1 /* AdventOfCode2021 */;
+			productReference = 8555F5B4274AE5FA00ED73A1 /* AdventOfCode */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -258,7 +268,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 8555F5AF274AE5FA00ED73A1 /* Build configuration list for PBXProject "AdventOfCode2021" */;
+			buildConfigurationList = 8555F5AF274AE5FA00ED73A1 /* Build configuration list for PBXProject "AdventOfCode" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -271,7 +281,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8555F5B3274AE5FA00ED73A1 /* AdventOfCode2021 */,
+				8555F5B3274AE5FA00ED73A1 /* AdventOfCode */,
 			);
 		};
 /* End PBXProject section */
@@ -461,7 +471,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		8555F5AF274AE5FA00ED73A1 /* Build configuration list for PBXProject "AdventOfCode2021" */ = {
+		8555F5AF274AE5FA00ED73A1 /* Build configuration list for PBXProject "AdventOfCode" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8555F5B9274AE5FA00ED73A1 /* Debug */,
@@ -470,7 +480,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8555F5BB274AE5FA00ED73A1 /* Build configuration list for PBXNativeTarget "AdventOfCode2021" */ = {
+		8555F5BB274AE5FA00ED73A1 /* Build configuration list for PBXNativeTarget "AdventOfCode" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8555F5BC274AE5FA00ED73A1 /* Debug */,

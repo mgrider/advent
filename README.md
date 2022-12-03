@@ -7,6 +7,11 @@ All code by [Martin Grider](http://chesstris.com/) unless otherwise noted. But I
 I do this for fun, and when it stops feeling fun (sometimes it just feels like work), I stop.
 
 
+## 2022
+
+I renamed my project from 2021 to be more generic, and moved everything into a 2021 folder. Not doing this year in realtime... just as I feel like it.
+
+
 ## 2021
 
 Decided to get organized and create a project file ahead of time.
