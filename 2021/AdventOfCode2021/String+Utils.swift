@@ -60,6 +60,18 @@ extension String {
         return true
     }
 
+    public mutating func insertCharacter(char: String, atIndex index: Int) {
+        self.insert(char[0], at: self.index(self.startIndex, offsetBy: index))
+    }
+
+    func padLeft(totalWidth: Int, withString: String) -> String {
+        let toPad = totalWidth - self.count
+        if toPad < 1 {
+            return self
+        }
+        return "".padding(toLength: toPad, withPad: withString, startingAt: 0) + self
+    }
+
 	public mutating func replaceCharacterAt(index: Int, with str: String) {
 		self.remove(at: self.index(self.startIndex, offsetBy: index))
 		self.insert(contentsOf: str, at: self.index(self.startIndex, offsetBy: index))
@@ -80,14 +92,6 @@ extension String {
 
 	public func substring(with range: NSRange) -> String {
 		return (self as NSString).substring(with: range)
-	}
-
-	func padLeft(totalWidth: Int, withString: String) -> String {
-		let toPad = totalWidth - self.count
-		if toPad < 1 {
-			return self
-		}
-		return "".padding(toLength: toPad, withPad: withString, startingAt: 0) + self
 	}
 
 	// MARK: Regex

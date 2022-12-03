@@ -2,10 +2,13 @@ import Foundation
 
 class Day19 {
 
-    func part1() {
-        let input = inputArray()
+    struct Coord: Equatable, Hashable {
+        var x, y, z: Int
+    }
 
-        let output = input
+    func part1() {
+
+        let output = "input"
         print("part1 = \(output)")
     }
 
@@ -16,11 +19,32 @@ class Day19 {
         print("part2 = \(output)")
     }
 
-    private func inputArray() -> [String] {
-        return stringArray(fromFile: "Day19.txt")
+    //  1,  2,  3 xyz - zero rotation
+    //  3,  2, -1 cw rotation from "above"
+    // -1,  2, -3 twice
+    // -3,  2, -1 thrice
+    // 
+
+    var scannerInput = [Set<Coord>]()
+
+    private func parseScannerInput() {
+        let input = stringArray(fromFile: "Day19.txt")
+        var currentSet = Set<Coord>()
+        for line in input {
+            if line.hasPrefix("---") && !currentSet.isEmpty {
+                scannerInput.append(currentSet)
+                currentSet = Set<Coord>()
+            } else {
+                let parts = line.components(separatedBy: ",")
+                if let x = Int(parts[0]), let y = Int(parts[1]), let z = Int(parts[2]) {
+                    currentSet.insert(Coord(x: x, y: y, z: z))
+                }
+            }
+        }
     }
 
     func perform() {
+        parseScannerInput()
         part1()
         part2()
     }
