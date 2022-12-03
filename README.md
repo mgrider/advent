@@ -4,12 +4,12 @@ https://adventofcode.com/
 
 All code by [Martin Grider](http://chesstris.com/) unless otherwise noted. But I cannot claim to have created all the algorithms. When the going gets tough, I'm not above chatting with other folks doing it to get ideas, or even (usually last resort 2am kind of thing) looking at other folks solutions.
 
-I do this for fun, and when it stops feeling fun (sometimes it just feels like work), I stop.
+I'm doing this for fun, and when it stops feeling fun (sometimes it just feels like work), I'll probably stop.
 
 
 ## 2022
 
-I renamed my project from 2021 to be more generic, and moved everything into a 2021 folder. Not doing this year in realtime... just as I feel like it.
+I renamed my project from 2021 to be more generic, and moved everything into a 2021 folder. Not doing this year in realtime... just when I feel like it.
 
 
 ## 2021

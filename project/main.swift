@@ -1,6 +1,10 @@
 import Foundation
 
+// MARK: 2022
 
+
+
+// MARK: 2021
 
 //print("=== DAY 01 ===")
 //let day1 = Day01()

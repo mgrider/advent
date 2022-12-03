@@ -195,6 +195,13 @@
 			name = 2021;
 			sourceTree = "<group>";
 		};
+		8501EBDF293BB18700FA9A60 /* 2022 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = 2022;
+			sourceTree = "<group>";
+		};
 		855215532758922B00FAFD75 /* util */ = {
 			isa = PBXGroup;
 			children = (
@@ -210,6 +217,7 @@
 			isa = PBXGroup;
 			children = (
 				8501EBDE293BB0B100FA9A60 /* README.md */,
+				8555F5B7274AE5FA00ED73A1 /* main.swift */,
 				8555F5B6274AE5FA00ED73A1 /* AdventOfCode */,
 				8555F5B5274AE5FA00ED73A1 /* Products */,
 			);
@@ -226,7 +234,7 @@
 		8555F5B6274AE5FA00ED73A1 /* AdventOfCode */ = {
 			isa = PBXGroup;
 			children = (
-				8555F5B7274AE5FA00ED73A1 /* main.swift */,
+				8501EBDF293BB18700FA9A60 /* 2022 */,
 				8501EBDD293BB06100FA9A60 /* 2021 */,
 				855215532758922B00FAFD75 /* util */,
 			);
@@ -261,7 +269,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1310;
-				LastUpgradeCheck = 1310;
+				LastUpgradeCheck = 1410;
 				TargetAttributes = {
 					8555F5B3274AE5FA00ED73A1 = {
 						CreatedOnToolsVersion = 13.1;
@@ -365,6 +373,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -426,6 +435,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -450,6 +460,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = R5R7CPRD56;
 				ENABLE_HARDENED_RUNTIME = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -461,6 +472,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = R5R7CPRD56;
 				ENABLE_HARDENED_RUNTIME = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
