@@ -45,13 +45,13 @@ class Day18 {
                     continue
                 }
                 let snail2 = parseInputLine(input: input[i2])
-                allSnailInts = addSnailInts(left: allSnailInts, right: snail2)
-                reducedSnailInts = reduceSnailInts(allSnailInts)
-                while allSnailInts != reducedSnailInts {
-                    allSnailInts = reducedSnailInts
-                    reducedSnailInts = reduceSnailInts(allSnailInts)
+                var newSnailInts = addSnailInts(left: allSnailInts, right: snail2)
+                reducedSnailInts = reduceSnailInts(newSnailInts)
+                while newSnailInts != reducedSnailInts {
+                    newSnailInts = reducedSnailInts
+                    reducedSnailInts = reduceSnailInts(newSnailInts)
                 }
-                magnitudes.append(magnitudeOf(allSnailInts))
+                magnitudes.append(magnitudeOf(newSnailInts))
             }
         }
 
@@ -71,10 +71,10 @@ class Day18 {
         while newSnailInts.count > 2 {
             if let firstDepthIndex = newSnailInts.firstIndex(where: { $0.depth == searchDepth }) {
                 let first = newSnailInts[firstDepthIndex]
-                guard first.leftSide else {
-                    assertionFailure("first found was not left side!?!")
-                    return -1
-                }
+//                guard first.leftSide else {
+//                    assertionFailure("first found was not left side!?!")
+//                    return -1
+//                }
                 var leftSide = true
                 if firstDepthIndex > 0 && newSnailInts[firstDepthIndex - 1].depth == first.depth-1 && newSnailInts[firstDepthIndex - 1].leftSide {
                     leftSide = false
