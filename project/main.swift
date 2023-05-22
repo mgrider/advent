@@ -2,7 +2,8 @@ import Foundation
 
 // MARK: 2022
 
-
+let squareFit = SquareFit()
+squareFit.perform()
 
 // MARK: 2021
 
